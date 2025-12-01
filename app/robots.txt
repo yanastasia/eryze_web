@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://eryze.io/sitemap.xml
