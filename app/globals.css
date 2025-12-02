@@ -47,6 +47,7 @@
 
 :root {
   --radius: 0.625rem;
+  --font-header: other, system-ui, sans-serif;
   /* Eryze brand: off-white bg, navy fg */
   --background: #F8FAFC;
   --foreground: #101B37;

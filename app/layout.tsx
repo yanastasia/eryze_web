@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Sora, Geist_Mono } from "next/font/google";
+import { Inter, Geist_Mono } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
 import Header from "@/components/Header";
@@ -10,10 +10,6 @@ const bodyFont = Inter({
   subsets: ["latin"],
 });
 
-const headerFont = Sora({
-  variable: "--font-header",
-  subsets: ["latin"],
-});
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -70,7 +66,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark" style={{ colorScheme: "dark" }} suppressHydrationWarning>
-      <body className={`${bodyFont.variable} ${headerFont.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${bodyFont.variable} ${geistMono.variable} antialiased`}>
         <ThemeProvider>
           <Header />
           <main className="min-h-screen">

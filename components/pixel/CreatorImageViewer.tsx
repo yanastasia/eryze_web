@@ -51,7 +51,7 @@ export default function CreatorImageViewer() {
           <span className="inline-block h-[10px] bg-black/40" style={{ width: `${100 - progress}%` }} />
         </span>] {progress}% LOADING…
       </div>
-      <div className="mt-2 text-[12px] text-white/90">"Design is the interface between logic and feeling."</div>
+      <div className="mt-2 text-[12px] text-white/90">&ldquo;Design is the interface between logic and feeling.&rdquo;</div>
       <AnimatePresence>
         {selected !== null && (
           <motion.div

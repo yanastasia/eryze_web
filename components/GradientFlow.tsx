@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
+import type { CSSProperties } from "react";
 import { useEffect, useState } from "react";
 
 export default function GradientFlow() {
@@ -17,13 +18,12 @@ export default function GradientFlow() {
     return () => window.removeEventListener("mousemove", onMove);
   }, []);
 
-  const style = {
+  const style: CSSProperties & { [k: string]: string | number } = {
     y,
     opacity,
-    // Use CSS variables for radial highlight position
-    ["--mx" as any]: `${pos.x}px`,
-    ["--my" as any]: `${pos.y}px`,
-  } as any;
+    ["--mx"]: `${pos.x}px`,
+    ["--my"]: `${pos.y}px`,
+  };
 
   return (
     <div className="absolute inset-0 -z-10 overflow-hidden">

@@ -10,7 +10,12 @@ function useBeep() {
   const ctxRef = useRef<AudioContext | null>(null);
   useEffect(() => () => { ctxRef.current?.close(); }, []);
   return (freq = 800, duration = 0.04) => {
-    if (!ctxRef.current) ctxRef.current = new (window.AudioContext || (window as any).webkitAudioContext)();
+    if (!ctxRef.current) {
+      const AC = (window as unknown as { AudioContext?: typeof AudioContext; webkitAudioContext?: typeof AudioContext }).AudioContext
+        ?? (window as unknown as { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
+      ctxRef.current = AC ? new AC() : null;
+      if (!ctxRef.current) return;
+    }
     const ctx = ctxRef.current!;
     const osc = ctx.createOscillator();
     const gain = ctx.createGain();
