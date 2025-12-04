@@ -18,7 +18,7 @@ export default function CreatorImageViewer() {
   );
 
   const [selected, setSelected] = useState<number | null>(null);
-  const [progress, setProgress] = useState<number>(60);
+  const progress = 60;
 
   return (
     <div className="rounded-sm border border-white bg-gradient-to-br from-[#3C165B] to-[#140E26] p-3">

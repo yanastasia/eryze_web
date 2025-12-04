@@ -314,35 +314,95 @@ function Hero() {
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "mx-auto max-w-6xl px-4 sm:px-6 pt-20 sm:pt-24",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].h1, {
-                        variants: container,
-                        initial: "hidden",
-                        animate: "visible",
-                        className: "mt-8 font-header text-5xl sm:text-6xl font-semibold tracking-tight",
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "relative mt-8",
+                        onMouseMove: (e)=>{
+                            const r = e.currentTarget.getBoundingClientRect();
+                            const x = e.clientX - r.left;
+                            const y = e.clientY - r.top;
+                            e.currentTarget.style.setProperty("--mx", `${x}px`);
+                            e.currentTarget.style.setProperty("--my", `${y}px`);
+                        },
+                        style: {
+                            // ensure overlay is fully masked until the first mouse move
+                            WebkitMaskPosition: "var(--mx) var(--my)",
+                            maskPosition: "var(--mx) var(--my)",
+                            // place mask far offscreen initially so nothing is revealed
+                            // CSS variables used by mask gradient in overlay
+                            // @ts-expect-error CSS custom properties
+                            ["--mx"]: "-9999px",
+                            ["--my"]: "-9999px"
+                        },
                         children: [
-                            "Rise above the ordinary.".split(" ").map((w, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].span, {
-                                    variants: word,
-                                    className: "inline-block mr-2",
-                                    children: w
-                                }, i, false, {
-                                    fileName: "[project]/components/Hero.tsx",
-                                    lineNumber: 28,
-                                    columnNumber: 13
-                                }, this)),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].h1, {
+                                variants: container,
+                                initial: "hidden",
+                                animate: "visible",
+                                className: "font-header text-5xl sm:text-6xl font-semibold tracking-tight",
+                                children: [
+                                    "Rise above the ordinary.".split(' ').map((w, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].span, {
+                                            variants: word,
+                                            className: "inline-block mr-2",
+                                            children: w
+                                        }, i, false, {
+                                            fileName: "[project]/components/Hero.tsx",
+                                            lineNumber: 49,
+                                            columnNumber: 13
+                                        }, this)),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
+                                        fileName: "[project]/components/Hero.tsx",
+                                        lineNumber: 53,
+                                        columnNumber: 11
+                                    }, this),
+                                    "Build what moves the world.".split(' ').map((w, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].span, {
+                                            variants: word,
+                                            className: "inline-block mr-2 text-transparent select-none opacity-0",
+                                            children: w
+                                        }, i, false, {
+                                            fileName: "[project]/components/Hero.tsx",
+                                            lineNumber: 55,
+                                            columnNumber: 13
+                                        }, this))
+                                ]
+                            }, void 0, true, {
                                 fileName: "[project]/components/Hero.tsx",
-                                lineNumber: 32,
-                                columnNumber: 11
+                                lineNumber: 47,
+                                columnNumber: 9
                             }, this),
-                            "Build what moves the world.".split(" ").map((w, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].span, {
-                                    variants: word,
-                                    className: "inline-block mr-2",
-                                    children: w
-                                }, i, false, {
-                                    fileName: "[project]/components/Hero.tsx",
-                                    lineNumber: 34,
-                                    columnNumber: 13
-                                }, this))
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].h1, {
+                                "aria-hidden": true,
+                                className: "pointer-events-none absolute inset-0 font-header text-5xl sm:text-6xl font-semibold tracking-tight text-secondary dark:text-accent",
+                                style: {
+                                    WebkitMaskImage: `radial-gradient(130px circle at var(--mx) var(--my), #000 40%, transparent 60%)`,
+                                    maskImage: `radial-gradient(130px circle at var(--mx) var(--my), #000 40%, transparent 60%)`
+                                },
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "inline-block mr-2"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/Hero.tsx",
+                                        lineNumber: 68,
+                                        columnNumber: 11
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
+                                        fileName: "[project]/components/Hero.tsx",
+                                        lineNumber: 69,
+                                        columnNumber: 11
+                                    }, this),
+                                    "Build what moves the world.".split(' ').map((w, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                            className: "inline-block mr-2",
+                                            children: w
+                                        }, i, false, {
+                                            fileName: "[project]/components/Hero.tsx",
+                                            lineNumber: 71,
+                                            columnNumber: 13
+                                        }, this))
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/components/Hero.tsx",
+                                lineNumber: 60,
+                                columnNumber: 9
+                            }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Hero.tsx",
@@ -354,7 +414,7 @@ function Hero() {
                         children: "A development studio crafting bold digital experiences."
                     }, void 0, false, {
                         fileName: "[project]/components/Hero.tsx",
-                        lineNumber: 39,
+                        lineNumber: 77,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -367,12 +427,12 @@ function Hero() {
                                     children: "Explore Studio"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Hero.tsx",
-                                    lineNumber: 42,
+                                    lineNumber: 80,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/Hero.tsx",
-                                lineNumber: 41,
+                                lineNumber: 79,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$MagneticButton$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -383,18 +443,18 @@ function Hero() {
                                     children: "Visit Labs"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Hero.tsx",
-                                    lineNumber: 45,
+                                    lineNumber: 83,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/Hero.tsx",
-                                lineNumber: 44,
+                                lineNumber: 82,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Hero.tsx",
-                        lineNumber: 40,
+                        lineNumber: 78,
                         columnNumber: 9
                     }, this)
                 ]
@@ -405,7 +465,7 @@ function Hero() {
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ScrollCue$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/components/Hero.tsx",
-                lineNumber: 49,
+                lineNumber: 87,
                 columnNumber: 7
             }, this)
         ]

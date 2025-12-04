@@ -1,6 +1,6 @@
 "use client";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import PixelWindow from "@/components/pixel/PixelWindow";
 import PixelTaskbar from "@/components/pixel/PixelTaskbar";
 import PixelFolderGrid from "@/components/pixel/PixelFolderGrid";

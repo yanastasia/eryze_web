@@ -89,7 +89,7 @@ export default function BuilderTerminal({ onExecutionComplete }: BuilderTerminal
     };
     run();
     return () => { cancelled = true; };
-  }, [bootLines, contentLines]);
+  }, [bootLines, contentLines, beep]);
 
   const handleEnter = () => {
     setDisplay((prev) => [...prev, "> EXECUTION COMPLETE."]);

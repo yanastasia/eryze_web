@@ -1,15 +1,23 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTheme } from "next-themes";
 import Link from "next/link";
 import MagneticButton from "@/components/MagneticButton";
 
 export default function CollabBanner() {
+  const { resolvedTheme } = useTheme();
+  const isDark = resolvedTheme === "dark";
   return (
     <div className="relative overflow-hidden rounded-2xl border border-border">
-      <div className="absolute inset-0" style={{
-        background: "linear-gradient(135deg, #101B37, #0B1224)",
-      }} />
+      <div
+        className="absolute inset-0"
+        style={{
+          background: isDark
+            ? "linear-gradient(135deg, #101B37, #0B1224)"
+            : "linear-gradient(135deg, #E2E8F0, #CBD5E1)",
+        }}
+      />
       <motion.div
         className="absolute inset-0 opacity-60"
         animate={{ x: ["-20%", "120%", "-20%"] }}

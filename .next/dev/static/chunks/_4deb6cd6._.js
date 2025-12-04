@@ -10,10 +10,12 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$value$2f$use$2d$scroll$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/value/use-scroll.mjs [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$value$2f$use$2d$transform$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/value/use-transform.mjs [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$themes$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next-themes/dist/index.mjs [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
+;
 ;
 ;
 function GradientFlow() {
@@ -37,6 +39,8 @@ function GradientFlow() {
         x: 0,
         y: 0
     });
+    const { resolvedTheme } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$themes$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useTheme"])();
+    const isDark = resolvedTheme === "dark";
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "GradientFlow.useEffect": ()=>{
             const onMove = {
@@ -54,8 +58,8 @@ function GradientFlow() {
         }
     }["GradientFlow.useEffect"], []);
     const style = {
-        y,
-        opacity,
+        y: y.get(),
+        opacity: opacity.get(),
         ["--mx"]: `${pos.x}px`,
         ["--my"]: `${pos.y}px`
     };
@@ -67,30 +71,31 @@ function GradientFlow() {
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "h-full w-full",
                 style: {
-                    background: `radial-gradient(600px circle at var(--mx) var(--my), rgba(121,207,255,0.18), transparent 60%),` + `radial-gradient(500px circle at 20% 30%, rgba(139,92,246,0.20), transparent 60%),` + `radial-gradient(500px circle at 80% 70%, rgba(192,132,252,0.18), transparent 60%),` + `linear-gradient(135deg, #0B1224 0%, #101B37 60%, #0B1224 100%)`,
-                    filter: "saturate(1.1)"
+                    background: `radial-gradient(600px circle at var(--mx) var(--my), rgba(121,207,255,0.18), transparent 60%),` + `radial-gradient(500px circle at 20% 30%, rgba(139,92,246,0.20), transparent 60%),` + `radial-gradient(500px circle at 80% 70%, rgba(192,132,252,0.18), transparent 60%),` + (isDark ? `linear-gradient(135deg, #0B1224 0%, #101B37 60%, #0B1224 100%)` : `linear-gradient(135deg, #E2E8F0 0%, #CBD5E1 60%, #E2E8F0 100%)`),
+                    filter: "saturate(1.06)"
                 }
             }, void 0, false, {
                 fileName: "[project]/components/GradientFlow.tsx",
-                lineNumber: 31,
+                lineNumber: 34,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/components/GradientFlow.tsx",
-            lineNumber: 30,
+            lineNumber: 33,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/GradientFlow.tsx",
-        lineNumber: 29,
+        lineNumber: 32,
         columnNumber: 5
     }, this);
 }
-_s(GradientFlow, "7RiH6fxsrExTMqBXIbzze4BXOis=", false, function() {
+_s(GradientFlow, "Jzok9PG1cq/O91t8BH8zFx2wbjM=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$value$2f$use$2d$scroll$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useScroll"],
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$value$2f$use$2d$transform$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useTransform"],
-        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$value$2f$use$2d$transform$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useTransform"]
+        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$value$2f$use$2d$transform$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useTransform"],
+        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$themes$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useTheme"]
     ];
 });
 _c = GradientFlow;

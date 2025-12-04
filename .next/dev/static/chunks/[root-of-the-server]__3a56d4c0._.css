@@ -1232,26 +1232,6 @@
     border-color: var(--color-white);
   }
 
-  .border-white\/3 {
-    border-color: #ffffff08;
-  }
-
-  @supports (color: color-mix(in lab, red, red)) {
-    .border-white\/3 {
-      border-color: color-mix(in oklab, var(--color-white) 3%, transparent);
-    }
-  }
-
-  .border-white\/5 {
-    border-color: #ffffff0d;
-  }
-
-  @supports (color: color-mix(in lab, red, red)) {
-    .border-white\/5 {
-      border-color: color-mix(in oklab, var(--color-white) 5%, transparent);
-    }
-  }
-
   .border-white\/10 {
     border-color: #ffffff1a;
   }
@@ -1514,16 +1494,6 @@
 
   .bg-gradient-to-br {
     --tw-gradient-position: to bottom right in oklab;
-    background-image: linear-gradient(var(--tw-gradient-stops));
-  }
-
-  .bg-gradient-to-r {
-    --tw-gradient-position: to right in oklab;
-    background-image: linear-gradient(var(--tw-gradient-stops));
-  }
-
-  .bg-gradient-to-tr {
-    --tw-gradient-position: to top right in oklab;
     background-image: linear-gradient(var(--tw-gradient-stops));
   }
 
@@ -1834,6 +1804,10 @@
     color: var(--secondary-foreground);
   }
 
+  .text-transparent {
+    color: #0000;
+  }
+
   .text-white {
     color: var(--color-white);
   }
@@ -1877,6 +1851,10 @@
   .antialiased {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  .opacity-0 {
+    opacity: 0;
   }
 
   .opacity-10 {
@@ -1972,6 +1950,11 @@
   .outline-none {
     --tw-outline-style: none;
     outline-style: none;
+  }
+
+  .select-none {
+    -webkit-user-select: none;
+    user-select: none;
   }
 
   .selection\:bg-primary ::selection, .selection\:bg-primary::selection {
@@ -2480,6 +2463,10 @@
     }
   }
 
+  .dark\:text-accent:is(.dark *) {
+    color: var(--accent);
+  }
+
   @media (hover: hover) {
     .dark\:hover\:bg-accent\/50:is(.dark *):hover {
       background-color: var(--accent);
@@ -2642,7 +2629,7 @@
 :root {
   --radius: .625rem;
   --font-header: other, system-ui, sans-serif;
-  --background: #f8fafc;
+  --background: #e2e8f0;
   --foreground: #101b37;
   --card: #fff;
   --card-foreground: #101b37;
